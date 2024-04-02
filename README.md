@@ -1,5 +1,7 @@
 # 💫 About Me:
-Hi there! I'm Yehor Kharchenko
+Hi there! I'm Yehor Kharchenko:)
+I am an aspiring full-stack developer currently studying at AGH.
+I enjoy crafting various intriguing web applications and engaging in competitive programming.
 I'm currently working on social media for travelling.
 
 
