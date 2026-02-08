@@ -1,9 +1,4 @@
-<h1 align="center"> Hi 👋, I'm Yehor Kharchenko </h1>
-
-# 💫 About Me:
-I am an aspiring full-stack developer currently studying at AGH.<br>
-I enjoy crafting various intriguing web applications and engaging in competitive programming.<br>
-
+<h1 align="center"> Hi 👋 </h1>
 
 
 ## 🌐 Socials:
