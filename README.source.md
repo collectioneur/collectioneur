@@ -3,94 +3,54 @@
 <div style={{
   width: '100%',
   height: '100%',
-  background: '#0c0c0f',
+  background: '#08080c',
   display: 'flex',
   alignItems: 'center',
   fontFamily: 'Inter',
   position: 'relative',
   overflow: 'hidden',
   borderRadius: 16,
-  border: '1px solid rgba(255,255,255,0.07)',
+  border: '1px solid rgba(110,80,220,0.18)',
 }}>
+  {/* violet — bottom-left anchor */}
+  <div style={{ position:'absolute', width:520, height:380, borderRadius:260, background:'radial-gradient(ellipse, rgba(110,20,210,0.72) 0%, rgba(90,15,180,0.35) 40%, transparent 70%)', bottom:-220, left:-80, display:'flex' }} />
+  {/* deep blue — bleeds from violet */}
+  <div style={{ position:'absolute', width:440, height:320, borderRadius:220, background:'radial-gradient(ellipse, rgba(40,60,255,0.6) 0%, rgba(30,50,200,0.25) 45%, transparent 70%)', bottom:-200, left:80, display:'flex' }} />
+  {/* cyan-blue — center glow */}
+  <div style={{ position:'absolute', width:360, height:280, borderRadius:180, background:'radial-gradient(ellipse, rgba(0,130,255,0.45) 0%, rgba(0,100,220,0.18) 50%, transparent 70%)', bottom:-180, left:240, display:'flex' }} />
+  {/* cyan — right accent */}
+  <div style={{ position:'absolute', width:300, height:240, borderRadius:150, background:'radial-gradient(ellipse, rgba(0,190,230,0.32) 0%, transparent 70%)', bottom:-170, left:400, display:'flex' }} />
+  {/* violet secondary — right edge */}
+  <div style={{ position:'absolute', width:260, height:220, borderRadius:130, background:'radial-gradient(ellipse, rgba(90,30,200,0.38) 0%, transparent 70%)', bottom:-160, right:-20, display:'flex' }} />
+  {/* avatar ring */}
   <div style={{
     position: 'absolute',
-    width: 560,
-    height: 320,
-    borderRadius: 280,
-    background: 'radial-gradient(ellipse, rgba(80,30,220,0.65) 0%, rgba(50,20,160,0.3) 45%, transparent 70%)',
-    bottom: -160,
-    left: -60,
-    display: 'flex',
-  }} />
-  <div style={{
-    position: 'absolute',
-    width: 420,
-    height: 280,
-    borderRadius: 210,
-    background: 'radial-gradient(ellipse, rgba(30,60,255,0.45) 0%, transparent 70%)',
-    bottom: -140,
-    left: 140,
-    display: 'flex',
-  }} />
-  <div style={{
-    position: 'absolute',
-    left: 48,
-    top: 52,
-    width: 96,
-    height: 96,
+    left: 48, top: 52,
+    width: 96, height: 96,
     borderRadius: 48,
-    background: 'linear-gradient(135deg, #6622ee, #2244ff)',
+    background: 'linear-gradient(135deg, #6622ee, #0088ff)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
   }}>
-    <img
-      src={github.user.avatarUrl}
-      width={88}
-      height={88}
-      style={{ borderRadius: 44 }}
-    />
+    <img src={github.user.avatarUrl} width={88} height={88} style={{ borderRadius: 44 }} />
   </div>
-  <div style={{
-    display: 'flex',
-    flexDirection: 'column',
-    marginLeft: 168,
-    gap: 8,
-  }}>
-    <div style={{
-      display: 'flex',
-      fontSize: 38,
-      fontWeight: 800,
-      color: '#ffffff',
-      letterSpacing: '-1px',
-      lineHeight: 1,
-    }}>
+  {/* content */}
+  <div style={{ display:'flex', flexDirection:'column', marginLeft:168, gap:8 }}>
+    <div style={{ display:'flex', fontSize:38, fontWeight:800, color:'#ffffff', letterSpacing:'-1px', lineHeight:1 }}>
       {github.user.name || github.user.login}
     </div>
-    <div style={{
-      display: 'flex',
-      fontSize: 15,
-      color: 'rgba(180,160,255,0.75)',
-      fontWeight: 400,
-      letterSpacing: '0.3px',
-    }}>
+    <div style={{ display:'flex', fontSize:15, color:'rgba(180,165,255,0.8)', fontWeight:400, letterSpacing:'0.3px' }}>
       {github.user.bio || 'Full-Stack Engineer · Competitive Programmer · Open Source'}
     </div>
-    <div style={{ display: 'flex', gap: 8, marginTop: 6 }}>
+    <div style={{ display:'flex', gap:8, marginTop:6 }}>
       {['React', 'TypeScript', 'Next.js', 'C++'].map(function(tag) {
         return (
           <div key={tag} style={{
-            display: 'flex',
-            padding: '4px 12px',
-            borderRadius: 20,
-            background: 'rgba(90,40,220,0.2)',
-            border: '1px solid rgba(100,60,240,0.35)',
-            color: 'rgba(200,190,255,0.85)',
-            fontSize: 12,
-            fontWeight: 600,
-          }}>
-            {tag}
-          </div>
+            display:'flex', padding:'4px 12px', borderRadius:20,
+            background:'rgba(80,40,220,0.18)', border:'1px solid rgba(100,70,240,0.32)',
+            color:'rgba(205,195,255,0.85)', fontSize:12, fontWeight:600,
+          }}>{tag}</div>
         );
       })}
     </div>
@@ -106,62 +66,40 @@
     { label: 'Repos', value: String(github.stats.totalRepos), color: '#a78bfa' },
     { label: 'Stars', value: String(github.stats.totalStars), color: '#60a5fa' },
     { label: 'Commits', value: String(github.stats.totalCommits), color: '#f59e0b' },
-    { label: 'Forks', value: String(github.stats.totalForks), color: '#34d399' },
   ];
 
   return (
     <div style={{
-      width: '100%',
-      height: '100%',
-      background: '#0c0c0f',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      fontFamily: 'Inter',
-      borderRadius: 16,
-      border: '1px solid rgba(255,255,255,0.07)',
-      position: 'relative',
-      overflow: 'hidden',
+      width: '100%', height: '100%',
+      background: '#08080c',
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      fontFamily: 'Inter', borderRadius: 16,
+      border: '1px solid rgba(110,80,220,0.18)',
+      position: 'relative', overflow: 'hidden',
     }}>
-      <div style={{
-        position: 'absolute',
-        width: 700,
-        height: 260,
-        borderRadius: 350,
-        background: 'radial-gradient(ellipse, rgba(70,25,200,0.55) 0%, rgba(30,50,220,0.25) 45%, transparent 70%)',
-        bottom: -160,
-        left: '50%',
-        marginLeft: -350,
-        display: 'flex',
-      }} />
+      {/* violet left */}
+      <div style={{ position:'absolute', width:420, height:300, borderRadius:210, background:'radial-gradient(ellipse, rgba(110,20,210,0.65) 0%, rgba(80,15,170,0.28) 45%, transparent 70%)', bottom:-190, left:-60, display:'flex' }} />
+      {/* blue center-left */}
+      <div style={{ position:'absolute', width:380, height:280, borderRadius:190, background:'radial-gradient(ellipse, rgba(40,70,255,0.55) 0%, rgba(20,50,200,0.22) 45%, transparent 70%)', bottom:-180, left:120, display:'flex' }} />
+      {/* cyan-blue center */}
+      <div style={{ position:'absolute', width:340, height:260, borderRadius:170, background:'radial-gradient(ellipse, rgba(0,140,255,0.42) 0%, transparent 70%)', bottom:-170, left:290, display:'flex' }} />
+      {/* cyan right */}
+      <div style={{ position:'absolute', width:300, height:240, borderRadius:150, background:'radial-gradient(ellipse, rgba(0,195,235,0.3) 0%, transparent 70%)', bottom:-170, left:460, display:'flex' }} />
+      {/* violet far-right */}
+      <div style={{ position:'absolute', width:260, height:220, borderRadius:130, background:'radial-gradient(ellipse, rgba(100,30,210,0.4) 0%, transparent 70%)', bottom:-160, right:-30, display:'flex' }} />
       {stats.map(function(s, i) {
         return (
           <div key={s.label} style={{
-            flexGrow: 1,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
+            flexGrow: 1, display: 'flex', flexDirection: 'column',
+            alignItems: 'center', justifyContent: 'center',
             padding: '16px 8px',
             borderRight: i < stats.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none',
             gap: 5,
           }}>
-            <div style={{
-              display: 'flex',
-              fontSize: 30,
-              fontWeight: 800,
-              color: s.color,
-              lineHeight: 1,
-            }}>
+            <div style={{ display:'flex', fontSize:30, fontWeight:800, color:s.color, lineHeight:1 }}>
               {s.value}
             </div>
-            <div style={{
-              display: 'flex',
-              fontSize: 11,
-              color: 'rgba(200,195,220,0.45)',
-              fontWeight: 600,
-              letterSpacing: '1.5px',
-            }}>
+            <div style={{ display:'flex', fontSize:11, color:'rgba(200,195,225,0.45)', fontWeight:600, letterSpacing:'1.5px' }}>
               {s.label.toUpperCase()}
             </div>
           </div>
@@ -179,84 +117,48 @@
   var topLangs = github.languages.slice(0, 6).map(function(l) { return l.name; });
   var categories = [
     { title: 'Languages', color: '#a78bfa', items: topLangs },
-    { title: 'Frameworks', color: '#60a5fa', items: ['React', 'Next.js'] },
-    { title: 'Databases', color: '#34d399', items: ['PostgreSQL', 'MySQL'] },
+    { title: 'Frameworks', color: '#60a5fa', items: ['React Native', 'React', 'Next.js'] },
   ];
 
   return (
     <div style={{
-      width: '100%',
-      height: '100%',
-      background: '#0c0c0f',
-      display: 'flex',
-      flexDirection: 'column',
-      fontFamily: 'Inter',
-      padding: '20px 32px',
-      gap: 16,
-      borderRadius: 16,
-      border: '1px solid rgba(255,255,255,0.07)',
-      position: 'relative',
-      overflow: 'hidden',
+      width: '100%', height: '100%',
+      background: '#08080c',
+      display: 'flex', flexDirection: 'column',
+      fontFamily: 'Inter', padding: '20px 32px', gap: 16,
+      borderRadius: 16, border: '1px solid rgba(110,80,220,0.18)',
+      position: 'relative', overflow: 'hidden',
     }}>
-      <div style={{
-        position: 'absolute',
-        width: 500,
-        height: 340,
-        borderRadius: 250,
-        background: 'radial-gradient(ellipse, rgba(70,25,200,0.5) 0%, rgba(30,50,220,0.2) 50%, transparent 70%)',
-        bottom: -200,
-        left: -80,
-        display: 'flex',
-      }} />
-      <div style={{
-        position: 'absolute',
-        width: 380,
-        height: 280,
-        borderRadius: 190,
-        background: 'radial-gradient(ellipse, rgba(30,60,255,0.35) 0%, transparent 70%)',
-        bottom: -180,
-        left: 160,
-        display: 'flex',
-      }} />
-      <div style={{
-        display: 'flex',
-        fontSize: 10,
-        fontWeight: 700,
-        color: 'rgba(160,145,210,0.5)',
-        letterSpacing: '3px',
-      }}>
+      {/* violet — far left */}
+      <div style={{ position:'absolute', width:520, height:400, borderRadius:260, background:'radial-gradient(ellipse, rgba(115,20,215,0.68) 0%, rgba(85,15,175,0.3) 42%, transparent 70%)', bottom:-240, left:-90, display:'flex' }} />
+      {/* blue-violet */}
+      <div style={{ position:'absolute', width:440, height:340, borderRadius:220, background:'radial-gradient(ellipse, rgba(55,55,255,0.55) 0%, rgba(35,45,210,0.22) 45%, transparent 70%)', bottom:-220, left:100, display:'flex' }} />
+      {/* cyan-blue center */}
+      <div style={{ position:'absolute', width:380, height:300, borderRadius:190, background:'radial-gradient(ellipse, rgba(0,130,255,0.42) 0%, rgba(0,100,220,0.16) 50%, transparent 70%)', bottom:-200, left:270, display:'flex' }} />
+      {/* cyan */}
+      <div style={{ position:'absolute', width:320, height:260, borderRadius:160, background:'radial-gradient(ellipse, rgba(0,185,240,0.32) 0%, transparent 70%)', bottom:-190, left:430, display:'flex' }} />
+      {/* violet right edge */}
+      <div style={{ position:'absolute', width:280, height:240, borderRadius:140, background:'radial-gradient(ellipse, rgba(100,25,205,0.42) 0%, transparent 70%)', bottom:-180, right:-30, display:'flex' }} />
+      {/* hot center highlight */}
+      <div style={{ position:'absolute', width:200, height:180, borderRadius:100, background:'radial-gradient(ellipse, rgba(60,80,255,0.35) 0%, transparent 70%)', bottom:-80, left:320, display:'flex' }} />
+      <div style={{ display:'flex', fontSize:10, fontWeight:700, color:'rgba(155,140,210,0.5)', letterSpacing:'3px' }}>
         TECH STACK
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+      <div style={{ display:'flex', flexDirection:'column', gap:14 }}>
         {categories.map(function(cat) {
           return (
-            <div key={cat.title} style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-              <div style={{
-                display: 'flex',
-                fontSize: 10,
-                fontWeight: 700,
-                color: cat.color,
-                letterSpacing: '1px',
-                width: 80,
-                opacity: 0.85,
-              }}>
+            <div key={cat.title} style={{ display:'flex', alignItems:'center', gap:16 }}>
+              <div style={{ display:'flex', fontSize:10, fontWeight:700, color:cat.color, letterSpacing:'1px', width:80 }}>
                 {cat.title.toUpperCase()}
               </div>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 7 }}>
+              <div style={{ display:'flex', flexWrap:'wrap', gap:7 }}>
                 {cat.items.map(function(item) {
                   return (
                     <div key={item} style={{
-                      display: 'flex',
-                      padding: '4px 13px',
-                      borderRadius: 6,
-                      background: cat.color + '15',
-                      border: '1px solid ' + cat.color + '35',
-                      color: 'rgba(225,220,255,0.85)',
-                      fontSize: 12,
-                      fontWeight: 600,
-                    }}>
-                      {item}
-                    </div>
+                      display:'flex', padding:'4px 13px', borderRadius:6,
+                      background:cat.color + '15', border:'1px solid ' + cat.color + '35',
+                      color:'rgba(225,220,255,0.85)', fontSize:12, fontWeight:600,
+                    }}>{item}</div>
                   );
                 })}
               </div>
