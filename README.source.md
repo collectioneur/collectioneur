@@ -1,35 +1,35 @@
-# Yehor Kharchenko
 
 ```aura width=860 height=200
 <div style={{
   width: '100%',
   height: '100%',
-  background: 'linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%)',
+  background: '#0c0c0f',
   display: 'flex',
   alignItems: 'center',
   fontFamily: 'Inter',
   position: 'relative',
   overflow: 'hidden',
-  borderRadius: 15,
+  borderRadius: 16,
+  border: '1px solid rgba(255,255,255,0.07)',
 }}>
   <div style={{
     position: 'absolute',
-    width: 320,
+    width: 560,
     height: 320,
-    borderRadius: 160,
-    background: 'radial-gradient(circle, rgba(120,80,255,0.35) 0%, transparent 70%)',
-    top: -80,
-    left: -40,
+    borderRadius: 280,
+    background: 'radial-gradient(ellipse, rgba(80,30,220,0.65) 0%, rgba(50,20,160,0.3) 45%, transparent 70%)',
+    bottom: -160,
+    left: -60,
     display: 'flex',
   }} />
   <div style={{
     position: 'absolute',
-    width: 260,
-    height: 260,
-    borderRadius: 130,
-    background: 'radial-gradient(circle, rgba(0,200,255,0.25) 0%, transparent 70%)',
-    bottom: -60,
-    right: 60,
+    width: 420,
+    height: 280,
+    borderRadius: 210,
+    background: 'radial-gradient(ellipse, rgba(30,60,255,0.45) 0%, transparent 70%)',
+    bottom: -140,
+    left: 140,
     display: 'flex',
   }} />
   <div style={{
@@ -39,7 +39,7 @@
     width: 96,
     height: 96,
     borderRadius: 48,
-    background: 'linear-gradient(135deg, #7b2ff7, #00c8ff)',
+    background: 'linear-gradient(135deg, #6622ee, #2244ff)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -70,22 +70,22 @@
     <div style={{
       display: 'flex',
       fontSize: 15,
-      color: 'rgba(180,160,255,0.9)',
+      color: 'rgba(180,160,255,0.75)',
       fontWeight: 400,
-      letterSpacing: '0.5px',
+      letterSpacing: '0.3px',
     }}>
       {github.user.bio || 'Full-Stack Engineer · Competitive Programmer · Open Source'}
     </div>
-    <div style={{ display: 'flex', gap: 10, marginTop: 6 }}>
+    <div style={{ display: 'flex', gap: 8, marginTop: 6 }}>
       {['React', 'TypeScript', 'Next.js', 'C++'].map(function(tag) {
         return (
           <div key={tag} style={{
             display: 'flex',
             padding: '4px 12px',
             borderRadius: 20,
-            background: 'rgba(123,47,247,0.25)',
-            border: '1px solid rgba(123,47,247,0.5)',
-            color: '#c4b5fd',
+            background: 'rgba(90,40,220,0.2)',
+            border: '1px solid rgba(100,60,240,0.35)',
+            color: 'rgba(200,190,255,0.85)',
             fontSize: 12,
             fontWeight: 600,
           }}>
@@ -103,23 +103,37 @@
 ```aura width=860 height=140
 (function() {
   var stats = [
-    { label: 'Repos', value: String(github.stats.totalRepos), color: '#7b2ff7' },
-    { label: 'Stars', value: String(github.stats.totalStars), color: '#00c8ff' },
+    { label: 'Repos', value: String(github.stats.totalRepos), color: '#a78bfa' },
+    { label: 'Stars', value: String(github.stats.totalStars), color: '#60a5fa' },
     { label: 'Commits', value: String(github.stats.totalCommits), color: '#f59e0b' },
-    { label: 'Forks', value: String(github.stats.totalForks), color: '#10b981' },
+    { label: 'Forks', value: String(github.stats.totalForks), color: '#34d399' },
   ];
 
   return (
     <div style={{
       width: '100%',
       height: '100%',
-      background: 'linear-gradient(135deg, #0f0c29 0%, #1a1a2e 100%)',
+      background: '#0c0c0f',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       fontFamily: 'Inter',
-      borderRadius: 15,
+      borderRadius: 16,
+      border: '1px solid rgba(255,255,255,0.07)',
+      position: 'relative',
+      overflow: 'hidden',
     }}>
+      <div style={{
+        position: 'absolute',
+        width: 700,
+        height: 260,
+        borderRadius: 350,
+        background: 'radial-gradient(ellipse, rgba(70,25,200,0.55) 0%, rgba(30,50,220,0.25) 45%, transparent 70%)',
+        bottom: -160,
+        left: '50%',
+        marginLeft: -350,
+        display: 'flex',
+      }} />
       {stats.map(function(s, i) {
         return (
           <div key={s.label} style={{
@@ -129,8 +143,8 @@
             alignItems: 'center',
             justifyContent: 'center',
             padding: '16px 8px',
-            borderRight: i < stats.length - 1 ? '1px solid rgba(255,255,255,0.08)' : 'none',
-            gap: 6,
+            borderRight: i < stats.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none',
+            gap: 5,
           }}>
             <div style={{
               display: 'flex',
@@ -144,11 +158,11 @@
             <div style={{
               display: 'flex',
               fontSize: 11,
-              color: 'rgba(200,200,220,0.6)',
+              color: 'rgba(200,195,220,0.45)',
               fontWeight: 600,
               letterSpacing: '1.5px',
             }}>
-              {s.label}
+              {s.label.toUpperCase()}
             </div>
           </div>
         );
@@ -164,57 +178,81 @@
 (function() {
   var topLangs = github.languages.slice(0, 6).map(function(l) { return l.name; });
   var categories = [
-    { title: 'Languages', color: '#7b2ff7', items: topLangs },
-    { title: 'Frameworks', color: '#00c8ff', items: ['React', 'Next.js'] },
-    { title: 'Databases', color: '#10b981', items: ['PostgreSQL', 'MySQL'] },
+    { title: 'Languages', color: '#a78bfa', items: topLangs },
+    { title: 'Frameworks', color: '#60a5fa', items: ['React', 'Next.js'] },
+    { title: 'Databases', color: '#34d399', items: ['PostgreSQL', 'MySQL'] },
   ];
 
   return (
     <div style={{
       width: '100%',
       height: '100%',
-      background: 'linear-gradient(135deg, #0f0c29 0%, #1a1a2e 100%)',
+      background: '#0c0c0f',
       display: 'flex',
       flexDirection: 'column',
       fontFamily: 'Inter',
       padding: '20px 32px',
       gap: 16,
-      borderRadius: 15,
+      borderRadius: 16,
+      border: '1px solid rgba(255,255,255,0.07)',
+      position: 'relative',
+      overflow: 'hidden',
     }}>
       <div style={{
+        position: 'absolute',
+        width: 500,
+        height: 340,
+        borderRadius: 250,
+        background: 'radial-gradient(ellipse, rgba(70,25,200,0.5) 0%, rgba(30,50,220,0.2) 50%, transparent 70%)',
+        bottom: -200,
+        left: -80,
         display: 'flex',
-        fontSize: 11,
+      }} />
+      <div style={{
+        position: 'absolute',
+        width: 380,
+        height: 280,
+        borderRadius: 190,
+        background: 'radial-gradient(ellipse, rgba(30,60,255,0.35) 0%, transparent 70%)',
+        bottom: -180,
+        left: 160,
+        display: 'flex',
+      }} />
+      <div style={{
+        display: 'flex',
+        fontSize: 10,
         fontWeight: 700,
-        color: 'rgba(180,160,255,0.6)',
-        letterSpacing: '2.5px',
+        color: 'rgba(160,145,210,0.5)',
+        letterSpacing: '3px',
       }}>
         TECH STACK
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
         {categories.map(function(cat) {
           return (
             <div key={cat.title} style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
               <div style={{
                 display: 'flex',
-                fontSize: 11,
+                fontSize: 10,
                 fontWeight: 700,
                 color: cat.color,
                 letterSpacing: '1px',
                 width: 80,
+                opacity: 0.85,
               }}>
                 {cat.title.toUpperCase()}
               </div>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 7 }}>
                 {cat.items.map(function(item) {
                   return (
                     <div key={item} style={{
                       display: 'flex',
-                      padding: '5px 14px',
+                      padding: '4px 13px',
                       borderRadius: 6,
-                      background: cat.color + '18',
-                      border: '1px solid ' + cat.color + '40',
-                      color: '#e2e0ff',
-                      fontSize: 13,
+                      background: cat.color + '15',
+                      border: '1px solid ' + cat.color + '35',
+                      color: 'rgba(225,220,255,0.85)',
+                      fontSize: 12,
                       fontWeight: 600,
                     }}>
                       {item}
@@ -226,49 +264,6 @@
           );
         })}
       </div>
-    </div>
-  );
-})()
-```
-
-<br>
-
-```aura width=860 height=100
-(function() {
-  var links = [
-    { label: 'Facebook', icon: '🌐' },
-    { label: 'Codeforces', icon: '⚡' },
-    { label: 'LeetCode', icon: '🧩' },
-  ];
-
-  return (
-    <div style={{
-      width: '100%',
-      height: '100%',
-      background: 'linear-gradient(135deg, #0f0c29 0%, #302b63 100%)',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      gap: 32,
-      fontFamily: 'Inter',
-      borderRadius: 15,
-    }}>
-      {links.map(function(link) {
-        return (
-          <div key={link.label} style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 8,
-            padding: '10px 22px',
-            borderRadius: 8,
-            background: 'rgba(255,255,255,0.05)',
-            border: '1px solid rgba(255,255,255,0.1)',
-          }}>
-            <div style={{ display: 'flex', fontSize: 18 }}>{link.icon}</div>
-            <div style={{ display: 'flex', color: '#c4b5fd', fontSize: 14, fontWeight: 600 }}>{link.label}</div>
-          </div>
-        );
-      })}
     </div>
   );
 })()
