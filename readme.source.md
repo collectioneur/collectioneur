@@ -1,110 +1,114 @@
+# Yehor Kharchenko
+
 ```aura width=860 height=200
+<div style={{
+  width: '100%',
+  height: '100%',
+  background: 'linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%)',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  fontFamily: 'Inter',
+  position: 'relative',
+  overflow: 'hidden',
+  borderRadius: 15,
+}}>
+  <div style={{
+    position: 'absolute',
+    width: 320,
+    height: 320,
+    borderRadius: 160,
+    background: 'radial-gradient(circle, rgba(120,80,255,0.35) 0%, transparent 70%)',
+    top: -80,
+    left: -40,
+    display: 'flex',
+  }} />
+  <div style={{
+    position: 'absolute',
+    width: 260,
+    height: 260,
+    borderRadius: 130,
+    background: 'radial-gradient(circle, rgba(0,200,255,0.25) 0%, transparent 70%)',
+    bottom: -60,
+    right: 60,
+    display: 'flex',
+  }} />
+  <div style={{
+    position: 'absolute',
+    left: 48,
+    top: 52,
+    width: 96,
+    height: 96,
+    borderRadius: 48,
+    background: 'linear-gradient(135deg, #7b2ff7, #00c8ff)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }}>
     <div style={{
-      width: '100%',
-      height: '100%',
-      background: 'linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%)',
+      width: 88,
+      height: 88,
+      borderRadius: 44,
+      background: '#1a1a2e',
       display: 'flex',
-      flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      fontFamily: 'Inter',
-      position: 'relative',
-      overflow: 'hidden',
-      borderRadius: 15,
+      fontSize: 36,
+      color: '#ffffff',
     }}>
-      <div style={{
-        position: 'absolute',
-        width: 320,
-        height: 320,
-        borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(120,80,255,0.35) 0%, transparent 70%)',
-        top: -80,
-        left: -40,
-      }} />
-      <div style={{
-        position: 'absolute',
-        width: 260,
-        height: 260,
-        borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(0,200,255,0.25) 0%, transparent 70%)',
-        bottom: -60,
-        right: 60,
-      }} />
-      <div style={{
-        position: 'absolute',
-        left: 48,
-        top: 52,
-        width: 96,
-        height: 96,
-        borderRadius: '50%',
-        background: 'linear-gradient(135deg, #7b2ff7, #00c8ff)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        boxShadow: '0 0 32px rgba(123,47,247,0.6)',
-      }}>
-        <div style={{
-          width: 88,
-          height: 88,
-          borderRadius: '50%',
-          background: '#1a1a2e',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          fontSize: 36,
-          color: '#ffffff',
-        }}>
-          Y
-        </div>
-      </div>
-      <div style={{
-        display: 'flex',
-        flexDirection: 'column',
-        marginLeft: 168,
-        gap: 8,
-      }}>
-        <div style={{
-          fontSize: 38,
-          fontWeight: 800,
-          color: '#ffffff',
-          letterSpacing: '-1px',
-          lineHeight: 1,
-        }}>
-          Yehor Kharchenko
-        </div>
-        <div style={{
-          fontSize: 15,
-          color: 'rgba(180,160,255,0.9)',
-          fontWeight: 400,
-          letterSpacing: '0.5px',
-        }}>
-          Full-Stack Engineer · Competitive Programmer · Open Source
-        </div>
-        <div style={{ display: 'flex', gap: 10, marginTop: 6 }}>
-          {['React', 'TypeScript', 'Next.js', 'C++'].map(function(tag) {
-            return (
-              <div key={tag} style={{
-                padding: '4px 12px',
-                borderRadius: 20,
-                background: 'rgba(123,47,247,0.25)',
-                border: '1px solid rgba(123,47,247,0.5)',
-                color: '#c4b5fd',
-                fontSize: 12,
-                fontWeight: 600,
-              }}>
-                {tag}
-              </div>
-            );
-          })}
-        </div>
-      </div>
+      Y
     </div>
+  </div>
+  <div style={{
+    display: 'flex',
+    flexDirection: 'column',
+    marginLeft: 168,
+    gap: 8,
+  }}>
+    <div style={{
+      fontSize: 38,
+      fontWeight: 800,
+      color: '#ffffff',
+      letterSpacing: '-1px',
+      lineHeight: 1,
+    }}>
+      Yehor Kharchenko
+    </div>
+    <div style={{
+      fontSize: 15,
+      color: 'rgba(180,160,255,0.9)',
+      fontWeight: 400,
+      letterSpacing: '0.5px',
+    }}>
+      Full-Stack Engineer · Competitive Programmer · Open Source
+    </div>
+    <div style={{ display: 'flex', gap: 10, marginTop: 6 }}>
+      {['React', 'TypeScript', 'Next.js', 'C++'].map(function(tag) {
+        return (
+          <div key={tag} style={{
+            padding: '4px 12px',
+            borderRadius: 20,
+            background: 'rgba(123,47,247,0.25)',
+            border: '1px solid rgba(123,47,247,0.5)',
+            color: '#c4b5fd',
+            fontSize: 12,
+            fontWeight: 600,
+            display: 'flex',
+          }}>
+            {tag}
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</div>
 ```
 
 <br>
 
-<!-- ```aura width=860 height=140
-function Stats() {
+```aura width=860 height=140
+(function() {
   var stats = [
     { label: 'Repos', value: '21', color: '#7b2ff7' },
     { label: 'LeetCode', value: '200+', color: '#00c8ff' },
@@ -121,6 +125,7 @@ function Stats() {
       alignItems: 'center',
       justifyContent: 'center',
       fontFamily: 'Inter',
+      borderRadius: 15,
     }}>
       {stats.map(function(s, i) {
         return (
@@ -146,7 +151,6 @@ function Stats() {
               fontSize: 11,
               color: 'rgba(200,200,220,0.6)',
               fontWeight: 600,
-              textTransform: 'uppercase',
               letterSpacing: '1.5px',
             }}>
               {s.label}
@@ -156,14 +160,13 @@ function Stats() {
       })}
     </div>
   );
-}
-Stats()
+})()
 ```
 
 <br>
 
 ```aura width=860 height=220
-function TechStack() {
+(function() {
   var categories = [
     { title: 'Languages', color: '#7b2ff7', items: ['TypeScript', 'JavaScript', 'C++', 'C', 'HTML5', 'CSS3'] },
     { title: 'Frameworks', color: '#00c8ff', items: ['React', 'Next.js'] },
@@ -180,15 +183,15 @@ function TechStack() {
       fontFamily: 'Inter',
       padding: '20px 32px',
       gap: 16,
+      borderRadius: 15,
     }}>
       <div style={{
         fontSize: 11,
         fontWeight: 700,
         color: 'rgba(180,160,255,0.6)',
         letterSpacing: '2.5px',
-        textTransform: 'uppercase',
       }}>
-        Tech Stack
+        TECH STACK
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
         {categories.map(function(cat) {
@@ -198,12 +201,10 @@ function TechStack() {
                 fontSize: 11,
                 fontWeight: 700,
                 color: cat.color,
-                textTransform: 'uppercase',
                 letterSpacing: '1px',
                 width: 80,
-                flexShrink: 0,
               }}>
-                {cat.title}
+                {cat.title.toUpperCase()}
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                 {cat.items.map(function(item) {
@@ -216,6 +217,7 @@ function TechStack() {
                       color: '#e2e0ff',
                       fontSize: 13,
                       fontWeight: 600,
+                      display: 'flex',
                     }}>
                       {item}
                     </div>
@@ -228,14 +230,13 @@ function TechStack() {
       </div>
     </div>
   );
-}
-TechStack()
+})()
 ```
 
 <br>
 
 ```aura width=860 height=100
-function Footer() {
+(function() {
   var links = [
     { label: 'Facebook', icon: '🌐' },
     { label: 'Codeforces', icon: '⚡' },
@@ -252,6 +253,7 @@ function Footer() {
       justifyContent: 'center',
       gap: 32,
       fontFamily: 'Inter',
+      borderRadius: 15,
     }}>
       {links.map(function(link) {
         return (
@@ -271,6 +273,5 @@ function Footer() {
       })}
     </div>
   );
-}
-Footer()
-``` -->
+})()
+```
