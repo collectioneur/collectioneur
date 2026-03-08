@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'readme.source.md'
+      - 'README.source.md'
       - '.github/workflows/readme-aura.yml'
   schedule:
     - cron: '0 6 * * *'
@@ -23,10 +23,10 @@ jobs:
       - name: Generate README
         uses: collectioneur/readme-aura@main
         with:
-          source: readme.source.md
+          source: README.source.md
           output: README.md
           assets_dir: .github/assets
           github_token: ${{ secrets.GITHUB_TOKEN }}
           github_user: collectioneur
           auto_commit: 'true'
-          commit_message: 'chore: regenerate README via readme-aura'
+          commit_message: 'generate README via readme-aura'

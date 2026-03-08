@@ -46,19 +46,12 @@
     alignItems: 'center',
     justifyContent: 'center',
   }}>
-    <div style={{
-      width: 88,
-      height: 88,
-      borderRadius: 44,
-      background: '#1a1a2e',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      fontSize: 36,
-      color: '#ffffff',
-    }}>
-      Y
-    </div>
+    <img
+      src={github.user.avatarUrl}
+      width={88}
+      height={88}
+      style={{ borderRadius: 44 }}
+    />
   </div>
   <div style={{
     display: 'flex',
@@ -73,7 +66,7 @@
       letterSpacing: '-1px',
       lineHeight: 1,
     }}>
-      Yehor Kharchenko
+      {github.user.name || github.user.login}
     </div>
     <div style={{
       fontSize: 15,
@@ -81,7 +74,7 @@
       fontWeight: 400,
       letterSpacing: '0.5px',
     }}>
-      Full-Stack Engineer · Competitive Programmer · Open Source
+      {github.user.bio || 'Full-Stack Engineer · Competitive Programmer · Open Source'}
     </div>
     <div style={{ display: 'flex', gap: 10, marginTop: 6 }}>
       {['React', 'TypeScript', 'Next.js', 'C++'].map(function(tag) {
@@ -110,10 +103,10 @@
 ```aura width=860 height=140
 (function() {
   var stats = [
-    { label: 'Repos', value: '21', color: '#7b2ff7' },
-    { label: 'LeetCode', value: '200+', color: '#00c8ff' },
-    { label: 'Codeforces', value: 'Pupil', color: '#f59e0b' },
-    { label: 'Languages', value: '5', color: '#10b981' },
+    { label: 'Repos', value: github.stats.totalRepos, color: '#7b2ff7' },
+    { label: 'Stars', value: github.stats.totalStars, color: '#00c8ff' },
+    { label: 'Commits', value: github.stats.totalCommits, color: '#f59e0b' },
+    { label: 'Forks', value: github.stats.totalForks, color: '#10b981' },
   ];
 
   return (
@@ -167,8 +160,9 @@
 
 ```aura width=860 height=220
 (function() {
+  var topLangs = github.languages.slice(0, 6).map(function(l) { return l.name; });
   var categories = [
-    { title: 'Languages', color: '#7b2ff7', items: ['TypeScript', 'JavaScript', 'C++', 'C', 'HTML5', 'CSS3'] },
+    { title: 'Languages', color: '#7b2ff7', items: topLangs },
     { title: 'Frameworks', color: '#00c8ff', items: ['React', 'Next.js'] },
     { title: 'Databases', color: '#10b981', items: ['PostgreSQL', 'MySQL'] },
   ];
