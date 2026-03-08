@@ -6,9 +6,7 @@
   height: '100%',
   background: 'linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%)',
   display: 'flex',
-  flexDirection: 'column',
   alignItems: 'center',
-  justifyContent: 'center',
   fontFamily: 'Inter',
   position: 'relative',
   overflow: 'hidden',
@@ -82,6 +80,7 @@
       {['React', 'TypeScript', 'Next.js', 'C++'].map(function(tag) {
         return (
           <div key={tag} style={{
+            display: 'flex',
             padding: '4px 12px',
             borderRadius: 20,
             background: 'rgba(123,47,247,0.25)',
@@ -89,7 +88,6 @@
             color: '#c4b5fd',
             fontSize: 12,
             fontWeight: 600,
-            display: 'flex',
           }}>
             {tag}
           </div>
@@ -105,10 +103,10 @@
 ```aura width=860 height=140
 (function() {
   var stats = [
-    { label: 'Repos', value: github.stats.totalRepos, color: '#7b2ff7' },
-    { label: 'Stars', value: github.stats.totalStars, color: '#00c8ff' },
-    { label: 'Commits', value: github.stats.totalCommits, color: '#f59e0b' },
-    { label: 'Forks', value: github.stats.totalForks, color: '#10b981' },
+    { label: 'Repos', value: String(github.stats.totalRepos), color: '#7b2ff7' },
+    { label: 'Stars', value: String(github.stats.totalStars), color: '#00c8ff' },
+    { label: 'Commits', value: String(github.stats.totalCommits), color: '#f59e0b' },
+    { label: 'Forks', value: String(github.stats.totalForks), color: '#10b981' },
   ];
 
   return (
@@ -125,7 +123,7 @@
       {stats.map(function(s, i) {
         return (
           <div key={s.label} style={{
-            flex: 1,
+            flexGrow: 1,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -135,6 +133,7 @@
             gap: 6,
           }}>
             <div style={{
+              display: 'flex',
               fontSize: 30,
               fontWeight: 800,
               color: s.color,
@@ -143,6 +142,7 @@
               {s.value}
             </div>
             <div style={{
+              display: 'flex',
               fontSize: 11,
               color: 'rgba(200,200,220,0.6)',
               fontWeight: 600,
@@ -182,6 +182,7 @@
       borderRadius: 15,
     }}>
       <div style={{
+        display: 'flex',
         fontSize: 11,
         fontWeight: 700,
         color: 'rgba(180,160,255,0.6)',
@@ -194,6 +195,7 @@
           return (
             <div key={cat.title} style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
               <div style={{
+                display: 'flex',
                 fontSize: 11,
                 fontWeight: 700,
                 color: cat.color,
@@ -206,6 +208,7 @@
                 {cat.items.map(function(item) {
                   return (
                     <div key={item} style={{
+                      display: 'flex',
                       padding: '5px 14px',
                       borderRadius: 6,
                       background: cat.color + '18',
@@ -213,7 +216,6 @@
                       color: '#e2e0ff',
                       fontSize: 13,
                       fontWeight: 600,
-                      display: 'flex',
                     }}>
                       {item}
                     </div>
@@ -262,8 +264,8 @@
             background: 'rgba(255,255,255,0.05)',
             border: '1px solid rgba(255,255,255,0.1)',
           }}>
-            <span style={{ fontSize: 18 }}>{link.icon}</span>
-            <span style={{ color: '#c4b5fd', fontSize: 14, fontWeight: 600 }}>{link.label}</span>
+            <div style={{ display: 'flex', fontSize: 18 }}>{link.icon}</div>
+            <div style={{ display: 'flex', color: '#c4b5fd', fontSize: 14, fontWeight: 600 }}>{link.label}</div>
           </div>
         );
       })}
