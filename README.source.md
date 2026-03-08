@@ -76,15 +76,15 @@
       position: 'relative', overflow: 'hidden',
     }}>
       {/* violet left */}
-      <div style={{ position:'absolute', width:420, height:300, borderRadius:210, background:'radial-gradient(ellipse, rgba(110,20,210,0.65) 0%, rgba(80,15,170,0.28) 45%, transparent 70%)', bottom:-190, left:-60, display:'flex' }} />
+      <div style={{ position:'absolute', width:420, height:300, borderRadius:210, background:'radial-gradient(ellipse, rgba(110,20,210,0.65) 0%, rgba(80,15,170,0.28) 45%, transparent 70%)', bottom:-190, right:-60, display:'flex' }} />
       {/* blue center-left */}
-      <div style={{ position:'absolute', width:380, height:280, borderRadius:190, background:'radial-gradient(ellipse, rgba(40,70,255,0.55) 0%, rgba(20,50,200,0.22) 45%, transparent 70%)', bottom:-180, left:120, display:'flex' }} />
+      <div style={{ position:'absolute', width:380, height:280, borderRadius:190, background:'radial-gradient(ellipse, rgba(40,70,255,0.55) 0%, rgba(20,50,200,0.22) 45%, transparent 70%)', bottom:-180, right:120, display:'flex' }} />
       {/* cyan-blue center */}
-      <div style={{ position:'absolute', width:340, height:260, borderRadius:170, background:'radial-gradient(ellipse, rgba(0,140,255,0.42) 0%, transparent 70%)', bottom:-170, left:290, display:'flex' }} />
+      <div style={{ position:'absolute', width:340, height:260, borderRadius:170, background:'radial-gradient(ellipse, rgba(0,140,255,0.42) 0%, transparent 70%)', bottom:-170, right:290, display:'flex' }} />
       {/* cyan right */}
-      <div style={{ position:'absolute', width:300, height:240, borderRadius:150, background:'radial-gradient(ellipse, rgba(0,195,235,0.3) 0%, transparent 70%)', bottom:-170, left:460, display:'flex' }} />
+      <div style={{ position:'absolute', width:300, height:240, borderRadius:150, background:'radial-gradient(ellipse, rgba(0,195,235,0.3) 0%, transparent 70%)', bottom:-170, right:460, display:'flex' }} />
       {/* violet far-right */}
-      <div style={{ position:'absolute', width:260, height:220, borderRadius:130, background:'radial-gradient(ellipse, rgba(100,30,210,0.4) 0%, transparent 70%)', bottom:-160, right:-30, display:'flex' }} />
+      <div style={{ position:'absolute', width:260, height:220, borderRadius:130, background:'radial-gradient(ellipse, rgba(100,30,210,0.4) 0%, transparent 70%)', bottom:-160, left:-30, display:'flex' }} />
       {stats.map(function(s, i) {
         return (
           <div key={s.label} style={{
