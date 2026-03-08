@@ -1,6 +1,4 @@
 ```aura width=860 height=200
-function Hero() {
-  return (
     <div style={{
       width: '100%',
       height: '100%',
@@ -100,14 +98,11 @@ function Hero() {
         </div>
       </div>
     </div>
-  );
-}
-Hero()
 ```
 
 <br>
 
-```aura width=860 height=140
+<!-- ```aura width=860 height=140
 function Stats() {
   var stats = [
     { label: 'Repos', value: '21', color: '#7b2ff7' },
@@ -277,4 +272,4 @@ function Footer() {
   );
 }
 Footer()
-```
+``` -->
