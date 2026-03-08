@@ -10,7 +10,7 @@
       fontFamily: 'Inter',
       position: 'relative',
       overflow: 'hidden',
-      border-radius: '15px',
+      borderRadius: 15,
     }}>
       <div style={{
         position: 'absolute',
