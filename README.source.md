@@ -58,8 +58,6 @@
 </div>
 ```
 
-<br>
-
 ```aura width=860 height=140
 (function() {
   var stats = [
@@ -110,9 +108,7 @@
 })()
 ```
 
-<br>
-
-```aura width=860 height=220
+```aura width=860 height=168
 (function() {
   var topLangs = github.languages.slice(0, 6).map(function(l) { return l.name; });
   var categories = [
@@ -125,22 +121,22 @@
       width: '100%', height: '100%',
       background: '#08080c',
       display: 'flex', flexDirection: 'column',
-      fontFamily: 'Inter', padding: '20px 32px', gap: 16,
+      fontFamily: 'Inter', padding: '18px 32px', gap: 14,
       borderRadius: 16, border: '1px solid rgba(110,80,220,0.18)',
       position: 'relative', overflow: 'hidden',
     }}>
       {/* violet — far left */}
-      <div style={{ position:'absolute', width:520, height:400, borderRadius:260, background:'radial-gradient(ellipse, rgba(115,20,215,0.68) 0%, rgba(85,15,175,0.3) 42%, transparent 70%)', bottom:-240, left:-90, display:'flex' }} />
+      <div style={{ position:'absolute', width:520, height:340, borderRadius:260, background:'radial-gradient(ellipse, rgba(115,20,215,0.68) 0%, rgba(85,15,175,0.3) 42%, transparent 70%)', bottom:-170, left:-90, display:'flex' }} />
       {/* blue-violet */}
-      <div style={{ position:'absolute', width:440, height:340, borderRadius:220, background:'radial-gradient(ellipse, rgba(55,55,255,0.55) 0%, rgba(35,45,210,0.22) 45%, transparent 70%)', bottom:-220, left:100, display:'flex' }} />
+      <div style={{ position:'absolute', width:440, height:280, borderRadius:220, background:'radial-gradient(ellipse, rgba(55,55,255,0.55) 0%, rgba(35,45,210,0.22) 45%, transparent 70%)', bottom:-150, left:100, display:'flex' }} />
       {/* cyan-blue center */}
-      <div style={{ position:'absolute', width:380, height:300, borderRadius:190, background:'radial-gradient(ellipse, rgba(0,130,255,0.42) 0%, rgba(0,100,220,0.16) 50%, transparent 70%)', bottom:-200, left:270, display:'flex' }} />
+      <div style={{ position:'absolute', width:380, height:260, borderRadius:190, background:'radial-gradient(ellipse, rgba(0,130,255,0.42) 0%, rgba(0,100,220,0.16) 50%, transparent 70%)', bottom:-140, left:270, display:'flex' }} />
       {/* cyan */}
-      <div style={{ position:'absolute', width:320, height:260, borderRadius:160, background:'radial-gradient(ellipse, rgba(0,185,240,0.32) 0%, transparent 70%)', bottom:-190, left:430, display:'flex' }} />
+      <div style={{ position:'absolute', width:320, height:220, borderRadius:160, background:'radial-gradient(ellipse, rgba(0,185,240,0.32) 0%, transparent 70%)', bottom:-130, left:430, display:'flex' }} />
       {/* violet right edge */}
-      <div style={{ position:'absolute', width:280, height:240, borderRadius:140, background:'radial-gradient(ellipse, rgba(100,25,205,0.42) 0%, transparent 70%)', bottom:-180, right:-30, display:'flex' }} />
+      <div style={{ position:'absolute', width:280, height:200, borderRadius:140, background:'radial-gradient(ellipse, rgba(100,25,205,0.42) 0%, transparent 70%)', bottom:-120, right:-30, display:'flex' }} />
       {/* hot center highlight */}
-      <div style={{ position:'absolute', width:200, height:180, borderRadius:100, background:'radial-gradient(ellipse, rgba(60,80,255,0.35) 0%, transparent 70%)', bottom:-80, left:320, display:'flex' }} />
+      <div style={{ position:'absolute', width:200, height:160, borderRadius:100, background:'radial-gradient(ellipse, rgba(60,80,255,0.35) 0%, transparent 70%)', bottom:-50, left:320, display:'flex' }} />
       <div style={{ display:'flex', fontSize:10, fontWeight:700, color:'rgba(155,140,210,0.5)', letterSpacing:'3px' }}>
         TECH STACK
       </div>
