@@ -60,6 +60,7 @@
     gap: 8,
   }}>
     <div style={{
+      display: 'flex',
       fontSize: 38,
       fontWeight: 800,
       color: '#ffffff',
@@ -69,6 +70,7 @@
       {github.user.name || github.user.login}
     </div>
     <div style={{
+      display: 'flex',
       fontSize: 15,
       color: 'rgba(180,160,255,0.9)',
       fontWeight: 400,
