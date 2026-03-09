@@ -11,15 +11,15 @@
     {`
       @keyframes float-slow {
         0%, 100% { transform: translateX(0px); opacity: 0.8; }
-        50% { transform: translateX(35px); opacity: 1.2; }
+        50% { transform: translateX(350px); opacity: 1.2; }
       }
       @keyframes float-medium {
         0%, 100% { transform: translateX(0px); opacity: 0.7; }
-        50% { transform: translateX(-25px); opacity: 1.1; }
+        50% { transform: translateX(-250px); opacity: 1.1; }
       }
       @keyframes float-fast {
         0%, 100% { transform: translateX(0px); opacity: 0.9; }
-        50% { transform: translateX(20px); opacity: 0.6; }
+        50% { transform: translateX(200px); opacity: 0.6; }
       }
       #glow-1 { animation: float-slow 8s ease-in-out infinite; }
       #glow-2 { animation: float-medium 12s ease-in-out infinite; }
