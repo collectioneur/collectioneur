@@ -12,16 +12,59 @@
   borderRadius: 16,
   border: '1px solid rgba(110,80,220,0.18)',
 }}>
+<div style={{
+  width: '100%',
+  height: '100%',
+  background: '#08080c',
+  display: 'flex',
+  alignItems: 'center',
+  fontFamily: 'Inter',
+  position: 'relative',
+  overflow: 'hidden',
+  borderRadius: 16,
+  border: '1px solid rgba(110,80,220,0.18)',
+}}>
+  {/* Инъекция CSS-анимаций */}
+  <style>
+    {`
+      @keyframes float-slow {
+        0%, 100% { transform: translateX(0px); opacity: 0.8; }
+        50% { transform: translateX(35px); opacity: 1.2; }
+      }
+      @keyframes float-medium {
+        0%, 100% { transform: translateX(0px); opacity: 0.7; }
+        50% { transform: translateX(-25px); opacity: 1.1; }
+      }
+      @keyframes float-fast {
+        0%, 100% { transform: translateX(0px); opacity: 0.9; }
+        50% { transform: translateX(20px); opacity: 0.6; }
+      }
+      
+      /* Раздаем разные анимации с разной длительностью для асинхронности */
+      .glow-1 { animation: float-slow 8s ease-in-out infinite; }
+      .glow-2 { animation: float-medium 12s ease-in-out infinite; }
+      .glow-3 { animation: float-fast 9s ease-in-out infinite; }
+      .glow-4 { animation: float-slow 11s ease-in-out infinite reverse; }
+      .glow-5 { animation: float-medium 14s ease-in-out infinite reverse; }
+    `}
+  </style>
+
+  {/* Применяем классы к вашим градиентам */}
   {/* violet — bottom-left anchor */}
-  <div style={{ position:'absolute', width:520, height:380, borderRadius:260, background:'radial-gradient(ellipse, rgba(110,20,210,0.72) 0%, rgba(90,15,180,0.35) 40%, transparent 70%)', bottom:-220, left:-80, display:'flex' }} />
+  <div className="glow-1" style={{ position:'absolute', width:520, height:380, borderRadius:260, background:'radial-gradient(ellipse, rgba(110,20,210,0.72) 0%, rgba(90,15,180,0.35) 40%, transparent 70%)', bottom:-220, left:-80, display:'flex' }} />
+  
   {/* deep blue — bleeds from violet */}
-  <div style={{ position:'absolute', width:440, height:320, borderRadius:220, background:'radial-gradient(ellipse, rgba(40,60,255,0.6) 0%, rgba(30,50,200,0.25) 45%, transparent 70%)', bottom:-200, left:80, display:'flex' }} />
+  <div className="glow-2" style={{ position:'absolute', width:440, height:320, borderRadius:220, background:'radial-gradient(ellipse, rgba(40,60,255,0.6) 0%, rgba(30,50,200,0.25) 45%, transparent 70%)', bottom:-200, left:80, display:'flex' }} />
+  
   {/* cyan-blue — center glow */}
-  <div style={{ position:'absolute', width:360, height:280, borderRadius:180, background:'radial-gradient(ellipse, rgba(0,130,255,0.45) 0%, rgba(0,100,220,0.18) 50%, transparent 70%)', bottom:-180, left:240, display:'flex' }} />
+  <div className="glow-3" style={{ position:'absolute', width:360, height:280, borderRadius:180, background:'radial-gradient(ellipse, rgba(0,130,255,0.45) 0%, rgba(0,100,220,0.18) 50%, transparent 70%)', bottom:-180, left:240, display:'flex' }} />
+  
   {/* cyan — right accent */}
-  <div style={{ position:'absolute', width:300, height:240, borderRadius:150, background:'radial-gradient(ellipse, rgba(0,190,230,0.32) 0%, transparent 70%)', bottom:-170, left:400, display:'flex' }} />
+  <div className="glow-4" style={{ position:'absolute', width:300, height:240, borderRadius:150, background:'radial-gradient(ellipse, rgba(0,190,230,0.32) 0%, transparent 70%)', bottom:-170, left:400, display:'flex' }} />
+  
   {/* violet secondary — right edge */}
-  <div style={{ position:'absolute', width:260, height:220, borderRadius:130, background:'radial-gradient(ellipse, rgba(90,30,200,0.38) 0%, transparent 70%)', bottom:-160, right:-20, display:'flex' }} />
+  <div className="glow-5" style={{ position:'absolute', width:260, height:220, borderRadius:130, background:'radial-gradient(ellipse, rgba(90,30,200,0.38) 0%, transparent 70%)', bottom:-160, right:-20, display:'flex' }} />
+  
   {/* avatar ring */}
   <div style={{
     position: 'absolute',
@@ -35,8 +78,9 @@
   }}>
     <img src={github.user.avatarUrl} width={88} height={88} style={{ borderRadius: 44 }} />
   </div>
+  
   {/* content */}
-  <div style={{ display:'flex', flexDirection:'column', marginLeft:168, gap:8 }}>
+  <div style={{ display:'flex', flexDirection:'column', marginLeft:168, gap:8, zIndex: 10 }}>
     <div style={{ display:'flex', fontSize:38, fontWeight:800, color:'#ffffff', letterSpacing:'-1px', lineHeight:1 }}>
       {github.user.name || github.user.login}
     </div>
