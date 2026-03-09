@@ -22,8 +22,8 @@
         50% { transform: translateX(200px); opacity: 0.6; }
       }
       @keyframes float-diagonal {
-        0%, 100% { transform: translate(0px, 0px); opacity: 0.75; }
-        50% { transform: translate(120px, 30px); opacity: 1.0; }
+        0%, 100% { transform: translateX(0px); opacity: 0.75; }
+        50% { transform: translateX(300px); opacity: 1.0; }
       }
       @keyframes float-wave {
         0%, 100% { transform: translateX(0px); opacity: 0.65; }
@@ -92,9 +92,9 @@
     <ellipse id="glow-3" cx="420" cy="240" rx="180" ry="140" fill="url(#g3)" />
     <ellipse id="glow-4" cx="550" cy="250" rx="150" ry="120" fill="url(#g4)" />
     <ellipse id="glow-5" cx="750" cy="250" rx="130" ry="110" fill="url(#g5)" />
-    <ellipse id="glow-6" cx="100" cy="-20" rx="180" ry="140" fill="url(#g6)" />
-    <ellipse id="glow-7" cx="490" cy="-30" rx="220" ry="170" fill="url(#g7)" />
-    <ellipse id="glow-8" cx="790" cy="55" rx="150" ry="130" fill="url(#g8)" />
+    <ellipse id="glow-6" cx="300" cy="240" rx="180" ry="140" fill="url(#g6)" />
+    <ellipse id="glow-7" cx="490" cy="230" rx="220" ry="170" fill="url(#g7)" />
+    <ellipse id="glow-8" cx="590" cy="250" rx="150" ry="130" fill="url(#g8)" />
   </svg>
 
   <div style={{
@@ -205,11 +205,11 @@
             <stop offset="70%" stopColor="rgba(100,30,210,0)" />
           </radialGradient>
         </defs>
-        <ellipse id="glow-1" cx="710" cy="180" rx="210" ry="150" fill="url(#g1)" />
-        <ellipse id="glow-2" cx="550" cy="180" rx="190" ry="140" fill="url(#g2)" />
-        <ellipse id="glow-3" cx="400" cy="180" rx="170" ry="130" fill="url(#g3)" />
-        <ellipse id="glow-4" cx="250" cy="190" rx="150" ry="120" fill="url(#g4)" />
-        <ellipse id="glow-5" cx="100" cy="190" rx="130" ry="110" fill="url(#g5)" />
+        <ellipse id="glow-1" cx="710" cy="150" rx="210" ry="150" fill="url(#g1)" />
+        <ellipse id="glow-2" cx="550" cy="140" rx="190" ry="140" fill="url(#g2)" />
+        <ellipse id="glow-3" cx="400" cy="130" rx="170" ry="130" fill="url(#g3)" />
+        <ellipse id="glow-4" cx="250" cy="140" rx="150" ry="120" fill="url(#g4)" />
+        <ellipse id="glow-5" cx="100" cy="150" rx="130" ry="110" fill="url(#g5)" />
       </svg>
 
       {stats.map(function(s, i) {
