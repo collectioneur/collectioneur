@@ -13,6 +13,35 @@
   border: '1px solid rgba(110,80,220,0.18)',
 }}>
   
+  <div style={{
+  width: '100%', height: '100%', background: '#08080c',
+  display: 'flex', alignItems: 'center', fontFamily: 'Inter',
+  position: 'relative', overflow: 'hidden', borderRadius: 16,
+  border: '1px solid rgba(110,80,220,0.18)'
+}}>
+
+  <style>
+    {`
+      @keyframes float-slow {
+        0%, 100% { transform: translateX(0px); opacity: 0.8; }
+        50% { transform: translateX(35px); opacity: 1.2; }
+      }
+      @keyframes float-medium {
+        0%, 100% { transform: translateX(0px); opacity: 0.7; }
+        50% { transform: translateX(-25px); opacity: 1.1; }
+      }
+      @keyframes float-fast {
+        0%, 100% { transform: translateX(0px); opacity: 0.9; }
+        50% { transform: translateX(20px); opacity: 0.6; }
+      }
+      #glow-1 { animation: float-slow 8s ease-in-out infinite; }
+      #glow-2 { animation: float-medium 12s ease-in-out infinite; }
+      #glow-3 { animation: float-fast 9s ease-in-out infinite; }
+      #glow-4 { animation: float-slow 11s ease-in-out infinite reverse; }
+      #glow-5 { animation: float-medium 14s ease-in-out infinite reverse; }
+    `}
+  </style>
+
   <svg width="860" height="200" style={{ position: 'absolute', top: 0, left: 0 }}>
     <defs>
       <radialGradient id="g1" cx="50%" cy="50%" r="50%">
@@ -40,47 +69,21 @@
       </radialGradient>
     </defs>
 
-    <ellipse cx="180" cy="230" rx="260" ry="190" fill="url(#g1)">
-      <animate attributeName="cx" values="180; 215; 180" dur="8s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.8; 1.2; 0.8" dur="8s" repeatCount="indefinite" />
-    </ellipse>
-
-    <ellipse cx="300" cy="240" rx="220" ry="160" fill="url(#g2)">
-      <animate attributeName="cx" values="300; 275; 300" dur="12s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.7; 1.1; 0.7" dur="12s" repeatCount="indefinite" />
-    </ellipse>
-
-    <ellipse cx="420" cy="240" rx="180" ry="140" fill="url(#g3)">
-      <animate attributeName="cx" values="420; 440; 420" dur="9s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.9; 0.6; 0.9" dur="9s" repeatCount="indefinite" />
-    </ellipse>
-
-    <ellipse cx="550" cy="250" rx="150" ry="120" fill="url(#g4)">
-      <animate attributeName="cx" values="550; 515; 550" dur="11s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.8; 1.2; 0.8" dur="11s" repeatCount="indefinite" />
-    </ellipse>
-
-    <ellipse cx="750" cy="250" rx="130" ry="110" fill="url(#g5)">
-      <animate attributeName="cx" values="750; 775; 750" dur="14s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.7; 1.1; 0.7" dur="14s" repeatCount="indefinite" />
-    </ellipse>
+    <ellipse id="glow-1" cx="180" cy="230" rx="260" ry="190" fill="url(#g1)" />
+    <ellipse id="glow-2" cx="300" cy="240" rx="220" ry="160" fill="url(#g2)" />
+    <ellipse id="glow-3" cx="420" cy="240" rx="180" ry="140" fill="url(#g3)" />
+    <ellipse id="glow-4" cx="550" cy="250" rx="150" ry="120" fill="url(#g4)" />
+    <ellipse id="glow-5" cx="750" cy="250" rx="130" ry="110" fill="url(#g5)" />
   </svg>
 
-  {/* avatar ring */}
   <div style={{
-    position: 'absolute',
-    left: 48, top: 52,
-    width: 96, height: 96,
-    borderRadius: 48,
-    background: 'linear-gradient(135deg, #6622ee, #0088ff)',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    position: 'absolute', left: 48, top: 52, width: 96, height: 96,
+    borderRadius: 48, background: 'linear-gradient(135deg, #6622ee, #0088ff)',
+    display: 'flex', alignItems: 'center', justifyContent: 'center',
   }}>
     <img src={github.user.avatarUrl} width={88} height={88} style={{ borderRadius: 44 }} />
   </div>
   
-  {/* content */}
   <div style={{ display:'flex', flexDirection:'column', marginLeft:168, gap:8, zIndex: 10 }}>
     <div style={{ display:'flex', fontSize:38, fontWeight:800, color:'#ffffff', letterSpacing:'-1px', lineHeight:1 }}>
       {github.user.name || github.user.login}
