@@ -12,16 +12,60 @@
   borderRadius: 16,
   border: '1px solid rgba(110,80,220,0.18)',
 }}>
-  {/* violet — bottom-left anchor */}
-  <div style={{ position:'absolute', width:520, height:380, borderRadius:260, background:'radial-gradient(ellipse, rgba(110,20,210,0.72) 0%, rgba(90,15,180,0.35) 40%, transparent 70%)', bottom:-220, left:-80, display:'flex' }} />
-  {/* deep blue — bleeds from violet */}
-  <div style={{ position:'absolute', width:440, height:320, borderRadius:220, background:'radial-gradient(ellipse, rgba(40,60,255,0.6) 0%, rgba(30,50,200,0.25) 45%, transparent 70%)', bottom:-200, left:80, display:'flex' }} />
-  {/* cyan-blue — center glow */}
-  <div style={{ position:'absolute', width:360, height:280, borderRadius:180, background:'radial-gradient(ellipse, rgba(0,130,255,0.45) 0%, rgba(0,100,220,0.18) 50%, transparent 70%)', bottom:-180, left:240, display:'flex' }} />
-  {/* cyan — right accent */}
-  <div style={{ position:'absolute', width:300, height:240, borderRadius:150, background:'radial-gradient(ellipse, rgba(0,190,230,0.32) 0%, transparent 70%)', bottom:-170, left:400, display:'flex' }} />
-  {/* violet secondary — right edge */}
-  <div style={{ position:'absolute', width:260, height:220, borderRadius:130, background:'radial-gradient(ellipse, rgba(90,30,200,0.38) 0%, transparent 70%)', bottom:-160, right:-20, display:'flex' }} />
+  
+  <svg width="860" height="200" style={{ position: 'absolute', top: 0, left: 0 }}>
+    <defs>
+      <radialGradient id="g1" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stopColor="rgba(110,20,210,0.72)" />
+        <stop offset="40%" stopColor="rgba(90,15,180,0.35)" />
+        <stop offset="70%" stopColor="rgba(90,15,180,0)" />
+      </radialGradient>
+      <radialGradient id="g2" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stopColor="rgba(40,60,255,0.6)" />
+        <stop offset="45%" stopColor="rgba(30,50,200,0.25)" />
+        <stop offset="70%" stopColor="rgba(30,50,200,0)" />
+      </radialGradient>
+      <radialGradient id="g3" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stopColor="rgba(0,130,255,0.45)" />
+        <stop offset="50%" stopColor="rgba(0,100,220,0.18)" />
+        <stop offset="70%" stopColor="rgba(0,100,220,0)" />
+      </radialGradient>
+      <radialGradient id="g4" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stopColor="rgba(0,190,230,0.32)" />
+        <stop offset="70%" stopColor="rgba(0,190,230,0)" />
+      </radialGradient>
+      <radialGradient id="g5" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stopColor="rgba(90,30,200,0.38)" />
+        <stop offset="70%" stopColor="rgba(90,30,200,0)" />
+      </radialGradient>
+    </defs>
+
+    <ellipse cx="180" cy="230" rx="260" ry="190" fill="url(#g1)">
+      <animate attributeName="cx" values="180; 215; 180" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8; 1.2; 0.8" dur="8s" repeatCount="indefinite" />
+    </ellipse>
+
+    <ellipse cx="300" cy="240" rx="220" ry="160" fill="url(#g2)">
+      <animate attributeName="cx" values="300; 275; 300" dur="12s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7; 1.1; 0.7" dur="12s" repeatCount="indefinite" />
+    </ellipse>
+
+    <ellipse cx="420" cy="240" rx="180" ry="140" fill="url(#g3)">
+      <animate attributeName="cx" values="420; 440; 420" dur="9s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.9; 0.6; 0.9" dur="9s" repeatCount="indefinite" />
+    </ellipse>
+
+    <ellipse cx="550" cy="250" rx="150" ry="120" fill="url(#g4)">
+      <animate attributeName="cx" values="550; 515; 550" dur="11s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8; 1.2; 0.8" dur="11s" repeatCount="indefinite" />
+    </ellipse>
+
+    <ellipse cx="750" cy="250" rx="130" ry="110" fill="url(#g5)">
+      <animate attributeName="cx" values="750; 775; 750" dur="14s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7; 1.1; 0.7" dur="14s" repeatCount="indefinite" />
+    </ellipse>
+  </svg>
+
   {/* avatar ring */}
   <div style={{
     position: 'absolute',
@@ -35,8 +79,9 @@
   }}>
     <img src={github.user.avatarUrl} width={88} height={88} style={{ borderRadius: 44 }} />
   </div>
+  
   {/* content */}
-  <div style={{ display:'flex', flexDirection:'column', marginLeft:168, gap:8 }}>
+  <div style={{ display:'flex', flexDirection:'column', marginLeft:168, gap:8, zIndex: 10 }}>
     <div style={{ display:'flex', fontSize:38, fontWeight:800, color:'#ffffff', letterSpacing:'-1px', lineHeight:1 }}>
       {github.user.name || github.user.login}
     </div>
