@@ -1,6 +1,6 @@
 ![component-0](./.github/assets/component-0.svg?v=ec62f280)
 
-![component-1](./.github/assets/component-1.svg?v=4b647dd0)
+![component-1](./.github/assets/component-1.svg?v=dfe9c40a)
 
 ![component-2](./.github/assets/component-2.svg?v=36631bbc)
 
