@@ -1,18 +1,5 @@
 
 ```aura width=860 height=200
-<div style={{
-  width: '100%',
-  height: '100%',
-  background: '#08080c',
-  display: 'flex',
-  alignItems: 'center',
-  fontFamily: 'Inter',
-  position: 'relative',
-  overflow: 'hidden',
-  borderRadius: 16,
-  border: '1px solid rgba(110,80,220,0.18)',
-}}>
-  
   <div style={{
   width: '100%', height: '100%', background: '#08080c',
   display: 'flex', alignItems: 'center', fontFamily: 'Inter',
