@@ -1,8 +1,8 @@
-![component-0](./.github/assets/component-0.svg?v=a07dc661)
+![component-0](./.github/assets/component-0-a07dc661.svg)
 
-![component-1](./.github/assets/component-1.svg?v=8bb58f7a)
+![component-1](./.github/assets/component-1-872b5ad0.svg)
 
-![component-2](./.github/assets/component-2.svg?v=fd4956ff)
+![component-2](./.github/assets/component-2-07d43b79.svg)
 
 
 <br>
