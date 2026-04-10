@@ -1,32 +1,32 @@
-# name: Generate README
+name: Generate README
 
-# on:
-#   push:
-#     branches: [main]
-#     paths:
-#       - 'README.source.md'
-#       - '.github/workflows/readme-aura.yml'
-#   schedule:
-#     - cron: '0 6 * * *'
-#   workflow_dispatch:
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'README.source.md'
+      - '.github/workflows/readme-aura.yml'
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
 
-# permissions:
-#   contents: write
+permissions:
+  contents: write
 
-# jobs:
-#   generate:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout repository
-#         uses: actions/checkout@v4
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-#       - name: Generate README
-#         uses: collectioneur/readme-aura@main
-#         with:
-#           source: README.source.md
-#           output: README.md
-#           assets_dir: .github/assets
-#           github_token: ${{ secrets.GITHUB_TOKEN }}
-#           github_user: collectioneur
-#           auto_commit: 'true'
-#           commit_message: 'generate README via readme-aura'
+      - name: Generate README
+        uses: collectioneur/readme-aura@main
+        with:
+          source: README.source.md
+          output: README.md
+          assets_dir: .github/assets
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_user: collectioneur
+          auto_commit: 'true'
+          commit_message: 'generate README via readme-aura'
