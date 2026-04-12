@@ -375,7 +375,7 @@
 
 ```aura width=138 height=44 link="https://x.com/collectioneurr" inline align=center
 <SocialMediaButton
-  icon="https://cdn.simpleicons.org/x/ffffff"
+  icon="https://raw.githubusercontent.com/collectioneur/collectioneur/main/icons/x-icon.svg"
   text="X.com"
   backgroundColor="#000000"
   width={138}
@@ -392,7 +392,7 @@
 
 ```aura width=130 height=44 link="https://t.me/yyehorr" inline align=center
 <SocialMediaButton
-  icon="https://cdn.simpleicons.org/telegram/26A5E4"
+  icon="https://raw.githubusercontent.com/collectioneur/collectioneur/main/icons/telegram-icon.svg"
   text="Telegram"
   backgroundColor="#000000"
   width={130}
@@ -409,7 +409,7 @@
 
 ```aura width=110 height=44 link="mailto:yehorkharchenko4@gmail.com" inline align=center
 <SocialMediaButton
-  icon="https://cdn.simpleicons.org/gmail/EA4335"
+  icon="https://raw.githubusercontent.com/collectioneur/collectioneur/main/icons/gmail-icon.svg"
   text="Email"
   backgroundColor="#000000"
   width={110}
@@ -426,7 +426,7 @@
 
 ```aura width=130 height=44 link="https://www.pinterest.com/collectioneurr" inline align=center
 <SocialMediaButton
-  icon="https://cdn.simpleicons.org/pinterest/E60023"
+  icon="https://raw.githubusercontent.com/collectioneur/collectioneur/main/icons/pinterest-icon.svg"
   text="Pinterest"
   backgroundColor="#000000"
   width={130}
