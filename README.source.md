@@ -356,5 +356,90 @@
 })()
 ```
 
+```aura width=120 height=44 link="https://www.linkedin.com/in/ykharchenko/" inline align=center
+<SocialMediaButton
+  icon="https://raw.githubusercontent.com/collectioneur/collectioneur/main/icons/linkedin-icon.png"
+  text="Linkedin"
+  backgroundColor="#000000"
+  width={120}
+  height={44}
+  gradientStops={[
+    { offset: '0%', color: '#b57af9' },
+    { offset: '30%', color: '#000000' },
+    { offset: '60%', color: '#9d6bf0' },
+    { offset: '80%', color: '#000000' },
+    { offset: '100%', color: '#c89dfb' },
+  ]}
+/>
+```
+
+```aura width=138 height=44 link="https://x.com/collectioneur" inline align=center
+<SocialMediaButton
+  icon="https://cdn.simpleicons.org/x/ffffff"
+  text="X.com"
+  backgroundColor="#000000"
+  width={138}
+  height={44}
+  gradientStops={[
+    { offset: '0%', color: '#818cf8' },
+    { offset: '30%', color: '#000000' },
+    { offset: '60%', color: '#9298f8' },
+    { offset: '80%', color: '#000000' },
+    { offset: '100%', color: '#7479f5' },
+  ]}
+/>
+```
+
+```aura width=130 height=44 link="https://t.me/yyehorr" inline align=center
+<SocialMediaButton
+  icon="https://cdn.simpleicons.org/telegram/26A5E4"
+  text="Telegram"
+  backgroundColor="#000000"
+  width={130}
+  height={44}
+  gradientStops={[
+    { offset: '0%', color: '#5dc8f9' },
+    { offset: '30%', color: '#000000' },
+    { offset: '60%', color: '#7dd3fc' },
+    { offset: '80%', color: '#000000' },
+    { offset: '100%', color: '#4ec3f8' },
+  ]}
+/>
+```
+
+```aura width=110 height=44 link="mailto:yehorkharchenko4@gmail.com" inline align=center
+<SocialMediaButton
+  icon="https://cdn.simpleicons.org/gmail/EA4335"
+  text="Email"
+  backgroundColor="#000000"
+  width={110}
+  height={44}
+  gradientStops={[
+    { offset: '0%', color: '#d855f7' },
+    { offset: '30%', color: '#000000' },
+    { offset: '60%', color: '#b557e8' },
+    { offset: '80%', color: '#000000' },
+    { offset: '100%', color: '#cc6ef9' },
+  ]}
+/>
+```
+
+```aura width=130 height=44 link="https://www.pinterest.com/collectioneur" inline align=center
+<SocialMediaButton
+  icon="https://cdn.simpleicons.org/pinterest/E60023"
+  text="Pinterest"
+  backgroundColor="#000000"
+  width={130}
+  height={44}
+  gradientStops={[
+    { offset: '0%', color: '#f472b6' },
+    { offset: '30%', color: '#000000' },
+    { offset: '60%', color: '#fb7eb8' },
+    { offset: '80%', color: '#000000' },
+    { offset: '100%', color: '#f06aae' },
+  ]}
+/>
+```
+
 <br>
 <p align="center"><sub>𝗉𝗈𝗐𝖾𝗋𝖾𝖽 𝖻𝗒 <a href="https://github.com/collectioneur/readme-aura">𝗋𝖾𝖺𝖽𝗆𝖾-𝖺𝗎𝗋𝖺</a></sub></p>
