@@ -373,7 +373,7 @@
 />
 ```
 
-```aura width=138 height=44 link="https://x.com/collectioneur" inline align=center
+```aura width=138 height=44 link="https://x.com/collectioneurr" inline align=center
 <SocialMediaButton
   icon="https://cdn.simpleicons.org/x/ffffff"
   text="X.com"
@@ -424,7 +424,7 @@
 />
 ```
 
-```aura width=130 height=44 link="https://www.pinterest.com/collectioneur" inline align=center
+```aura width=130 height=44 link="https://www.pinterest.com/collectioneurr" inline align=center
 <SocialMediaButton
   icon="https://cdn.simpleicons.org/pinterest/E60023"
   text="Pinterest"
