@@ -441,5 +441,59 @@
 />
 ```
 
+<br/>
+
+```aura width=160 height=44 link="https://github.com/sponsors/collectioneur" inline align=center
+<div style={{ display: 'flex', alignItems: 'center', gap: 0, width: '100%', height: '100%', background: 'linear-gradient(135deg, #0d0008, #1a0012)', borderRadius: 14, fontFamily: 'Inter, sans-serif', position: 'relative', overflow: 'hidden' }}>
+  <svg width="160" height="44" style={{ position: 'absolute', top: 0, left: 0 }}>
+    <defs>
+      <filter id="spf" x="-100%" y="-100%" width="300%" height="300%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+      </filter>
+    </defs>
+    <rect x="0.5" y="0.5" width="159" height="43" rx="13.5" ry="13.5" fill="none" stroke="rgba(220,60,120,0.4)" strokeWidth="1" />
+    <path d="M 111 22 Q 135 22 111 44 L 151 44 A 9 10 0 0 1 171 34 L 171 10 A 9 10 0 0 1 151 0 Z" fill="rgba(220,60,130,0.6)" filter="url(#spf)" />
+    <ellipse cx="30" cy="22" rx="18" ry="15" fill="rgba(255,80,150,0.35)" filter="url(#spf)" />
+    <g transform="translate(30, 22)">
+      <g>
+        <g transform="scale(0.874) translate(-12, -11.93)">
+          <path d="M17.625 1.499c-2.32 0-4.354 1.203-5.625 3.03-1.271-1.827-3.305-3.03-5.625-3.03C3.129 1.499 0 4.253 0 8.249c0 4.275 3.068 7.847 5.828 10.227a33.14 33.14 0 0 0 5.616 3.876l.028.017.008.003-.001.003c.163.085.342.126.521.125.179.001.358-.041.521-.125l-.001-.003.008-.003.028-.017a33.14 33.14 0 0 0 5.616-3.876C20.932 16.096 24 12.524 24 8.249c0-3.996-3.129-6.75-6.375-6.75z" fill="none" stroke="rgba(255,80,150,0.7)" strokeWidth="1.5" />
+        </g>
+        <animateTransform attributeName="transform" type="scale" values="1;2.0" dur="2s" repeatCount="indefinite" calcMode="linear" />
+        <animate attributeName="opacity" values="0.7;0" dur="2s" repeatCount="indefinite" calcMode="linear" />
+      </g>
+    </g>
+    <g transform="translate(30, 22)">
+      <g>
+        <g transform="scale(0.874) translate(-12, -11.93)">
+          <path d="M17.625 1.499c-2.32 0-4.354 1.203-5.625 3.03-1.271-1.827-3.305-3.03-5.625-3.03C3.129 1.499 0 4.253 0 8.249c0 4.275 3.068 7.847 5.828 10.227a33.14 33.14 0 0 0 5.616 3.876l.028.017.008.003-.001.003c.163.085.342.126.521.125.179.001.358-.041.521-.125l-.001-.003.008-.003.028-.017a33.14 33.14 0 0 0 5.616-3.876C20.932 16.096 24 12.524 24 8.249c0-3.996-3.129-6.75-6.375-6.75z" fill="none" stroke="rgba(255,80,150,0.7)" strokeWidth="1.5" />
+        </g>
+        <animateTransform attributeName="transform" type="scale" values="1;2.0" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0.67s" />
+        <animate attributeName="opacity" values="0.7;0" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0.67s" />
+      </g>
+    </g>
+    <g transform="translate(30, 22)">
+      <g>
+        <g transform="scale(0.874) translate(-12, -11.93)">
+          <path d="M17.625 1.499c-2.32 0-4.354 1.203-5.625 3.03-1.271-1.827-3.305-3.03-5.625-3.03C3.129 1.499 0 4.253 0 8.249c0 4.275 3.068 7.847 5.828 10.227a33.14 33.14 0 0 0 5.616 3.876l.028.017.008.003-.001.003c.163.085.342.126.521.125.179.001.358-.041.521-.125l-.001-.003.008-.003.028-.017a33.14 33.14 0 0 0 5.616-3.876C20.932 16.096 24 12.524 24 8.249c0-3.996-3.129-6.75-6.375-6.75z" fill="none" stroke="rgba(255,80,150,0.7)" strokeWidth="1.5" />
+        </g>
+        <animateTransform attributeName="transform" type="scale" values="1;2.0" dur="2s" repeatCount="indefinite" calcMode="linear" begin="1.33s" />
+        <animate attributeName="opacity" values="0.7;0" dur="2s" repeatCount="indefinite" calcMode="linear" begin="1.33s" />
+      </g>
+    </g>
+    <g transform="translate(30, 22)">
+      <g>
+        <g transform="scale(0.874) translate(-12, -11.93)">
+          <path d="M17.625 1.499c-2.32 0-4.354 1.203-5.625 3.03-1.271-1.827-3.305-3.03-5.625-3.03C3.129 1.499 0 4.253 0 8.249c0 4.275 3.068 7.847 5.828 10.227a33.14 33.14 0 0 0 5.616 3.876l.028.017.008.003-.001.003c.163.085.342.126.521.125.179.001.358-.041.521-.125l-.001-.003.008-.003.028-.017a33.14 33.14 0 0 0 5.616-3.876C20.932 16.096 24 12.524 24 8.249c0-3.996-3.129-6.75-6.375-6.75z" fill="none" stroke="rgba(255,80,150,1)" strokeWidth="1.5" />
+        </g>
+        <animateTransform attributeName="transform" type="scale" values="0.85;1.0;0.85" dur="1.2s" repeatCount="indefinite" />
+      </g>
+    </g>
+  </svg>
+  <div style={{ width: 52, flexShrink: 0 }} />
+  <span style={{ fontSize: 14, fontWeight: 700, color: '#fafafa' }}>Sponsor me</span>
+</div>
+```
+
 <br>
 <p align="center"><sub>𝗉𝗈𝗐𝖾𝗋𝖾𝖽 𝖻𝗒 <a href="https://github.com/collectioneur/readme-aura">𝗋𝖾𝖺𝖽𝗆𝖾-𝖺𝗎𝗋𝖺</a></sub></p>
